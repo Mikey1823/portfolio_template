@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -6,10 +10,26 @@
 }
 
 @theme inline {
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mont: var(--font-mont), sans-serif;
+  --font-swash: var(--font-swash), system-ui;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-primary: #020024;
+  --color-secondary: #00D4FF;
+  --color-text-primary: #F8F9FA;
+  --color-text-secondary: #A0AEC0;
+
+  --color-warning: #FF0004;
+
+  --color-line-primary: #202C3C;
+
+  --radius-custom-sm: 8px;
+  --radius-custom-md: 16px;
+  --radius-custom-lg: 24px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +40,7 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--color-primary);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-open-sans), sans-serif;
 }
