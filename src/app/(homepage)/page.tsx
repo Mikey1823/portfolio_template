@@ -187,10 +187,7 @@ export default function Home() {
     }, []);
 
     return (
-        <div
-            ref={containerRef}
-            className="flex flex-col items-center min-h-screen relative bg-primary font-sans dark:bg-black">
-
+        <div ref={containerRef} className="flex flex-col items-center min-h-screen relative bg-primary font-sans dark:bg-black">
             <NoiseCanvas />
 
             <Image
@@ -244,20 +241,22 @@ export default function Home() {
                     </p>
                 </div>
 
-                <div className="faq-pill w-full flex items-center justify-center mt-12">
-                    <div
-                        className="flex flex-row space-x-3 px-3 py-2 bg-primary border border-line-primary w-fit rounded-full items-center justify-center align-middle cursor-pointer hover:bg-white/5 transition-colors">
-                        <div
-                            className="bg-secondary text-white py-1 px-3 rounded-full text-[10px] sm:text-xs font-semibold">
-                            <p>FAQ</p>
-                        </div>
+                <a href="/about_me">
+                   <div className="faq-pill w-full flex items-center justify-center mt-12">
+                       <div
+                           className="flex flex-row space-x-3 px-3 py-2 bg-primary border border-line-primary w-fit rounded-full items-center justify-center align-middle cursor-pointer hover:bg-white/5 transition-colors">
+                           <div
+                               className="bg-secondary text-white py-1 px-3 rounded-full text-[10px] sm:text-xs font-semibold">
+                               <p>FAQ</p>
+                           </div>
 
-                        <div className="flex flex-row space-x-2 align-middle justify-center items-center">
-                            <p className="text-white text-xs sm:text-sm font-medium">Get to know me</p>
-                            <ArrowRightIcon className="text-text-secondary" size={14}/>
-                        </div>
-                    </div>
-                </div>
+                           <div className="flex flex-row space-x-2 align-middle justify-center items-center">
+                               <p className="text-white text-xs sm:text-sm font-medium">Get to know me</p>
+                               <ArrowRightIcon className="text-text-secondary" size={14}/>
+                           </div>
+                       </div>
+                   </div>
+               </a>
             </div>
 
             <div className="animate-section relative z-10 offer_section w-full max-w-4xl mx-auto px-6 sm:px-10 mt-50 sm:mt-32 md:mt-58">
@@ -428,7 +427,9 @@ export default function Home() {
                     ))}
 
                     <div className="tools-item mt-4 flex flex-row gap-2 items-center justify-center text-center text-secondary hover:text-[#0E9EBC] cursor-pointer">
-                        <p className="text-xs">View the rest of the tools I use</p>
+                        <a href="/project_tools">
+                            <p className="text-xs">View the rest of the tools I use</p>
+                        </a>
                         <SquareArrowOutUpRightIcon size={12}/>
                     </div>
                 </div>
